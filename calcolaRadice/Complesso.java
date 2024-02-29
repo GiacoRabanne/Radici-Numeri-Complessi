@@ -1,13 +1,13 @@
 package calcolaRadice;
 
 public class Complesso {
-    double reale;
-    double immaginario;
+    static double reale;
+    static double immaginario;
 
-    static public Complesso calcolaRadice(Complesso termine, int n, int i) {
-        double modulo = Math.sqrt(termine.reale*termine.reale + termine.immaginario*termine.immaginario); //il modulo di un vettore lo calcolo con pitagora
+    static public Complesso calcolaRadice(int n, int i) {
+        double modulo = Math.sqrt(reale*reale + immaginario*immaginario); //il modulo di un vettore lo calcolo con pitagora
         double r = Math.pow(modulo, (double) 1/n); //ottengo il valore di r, facendo una semplice radice n-esima di un numero positivo.
-        double radianti = Math.acos(termine.reale/modulo); // termine_reale = modulo * cos(angolo) -> angolo = arcocoseno(termine_reale/modulo)
+        double radianti = Math.acos(reale/modulo); // termine_reale = modulo * cos(angolo) -> angolo = arcocoseno(termine_reale/modulo)
         Complesso radice = new Complesso();
 
         double coseno = Math.cos(radianti/n + i*2*Math.PI/n); //i rappresenta la classe di resto i in modulo n (è un valore che va da 0 a n-1)
