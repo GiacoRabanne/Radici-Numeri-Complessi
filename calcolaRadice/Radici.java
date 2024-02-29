@@ -1,12 +1,15 @@
 package calcolaRadice;
 import fond.io.*;
 
+
 public class Radici {
     public static void main(String[] args) {
         InputWindow in = new InputWindow();
         Complesso radicando = new Complesso();
         radicando.reale = in.readDouble("Inserisci la parte reale del radicando:");
+        
         radicando.immaginario = in.readDouble("Inserisci la parte complessa del radicando:");
+
         int n = in.readInt("Inserisci il grado della radice da calcolare");
         OutputWindow out = new OutputWindow("Radici Calcolate");
         out.setFont("SF Pro Display", 20);
