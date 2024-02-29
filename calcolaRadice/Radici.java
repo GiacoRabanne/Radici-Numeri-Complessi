@@ -1,5 +1,4 @@
 package calcolaRadice;
-import java.lang.*;
 import fond.io.*;
 
 public class Radici {
