@@ -1,10 +1,10 @@
 package calcolaRadice;
 
 public class Complesso {
-    static double reale;
-    static double immaginario;
+    double reale;
+    double immaginario;
 
-    static public Complesso calcolaRadice(int n, int i) {
+    public Complesso calcolaRadice(int n, int i) {
         double modulo = Math.sqrt(reale*reale + immaginario*immaginario); //il modulo di un vettore lo calcolo con pitagora
         double r = Math.pow(modulo, (double) 1/n); //ottengo il valore di r, facendo una semplice radice n-esima di un numero positivo.
         double radianti = Math.acos(reale/modulo); // termine_reale = modulo * cos(angolo) -> angolo = arcocoseno(termine_reale/modulo)
